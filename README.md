@@ -32,7 +32,7 @@ precedence ::ffff:0:0/96  100
 
 3.將預設認購套件庫取消(官方只是希望使用者能付費來提供遠端的維護)
 pico /etc/apt/sources.list
-加上這一行並存檔 (適用 4.x 版)
+加上這一行並存檔 (6.0-1 版 生效)
 deb http://download.proxmox.com/debian jessie pve-no-subscription
 再執行更新
 ~# apt-get update
