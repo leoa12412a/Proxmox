@@ -1,5 +1,11 @@
 # Proxmox
 
+如果想在hype-v下安裝proxmox可能會遇到proxmox裡虛擬化技術位開啟的問題，win server2016以上版本可以在power shell內開啟巢狀虛擬化技術
+```
+Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```
+參考網址:https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/user-guide/nested-virtualization
+
 剛安裝完成 Proxmox 後，務必要立即做系統的安全性更新。
 
 1.安裝vim
