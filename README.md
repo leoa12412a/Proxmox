@@ -26,7 +26,7 @@ Proxmox VE（英語：Proxmox Virtual Environment，通常簡稱為Proxmox），
 ## 初次登入
 
 帳號預設為root，根據提示我們可以去IP:8006查看web GUI
-![image](proxmox/start-1.PNG)</br>
+![image](proxmox/start1.PNG)</br>
 
 ## 剛安裝完成 Proxmox 後，務必要立即做系統的安全性更新。
 
