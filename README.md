@@ -66,31 +66,31 @@ deb http://download.proxmox.com/debian jessie pve-no-subscription
 ## GUI
 
 以下為GUI畫面，登入時可以選擇語言，翻譯還算滿完整的
-![image](proxmox/start-2.PNG)</br>
+![image](proxmox/start2.PNG)</br>
 
 local裡面有upload可以供上傳ISO檔等資料
-![image](proxmox/start-3.PNG)</br>
-![image](proxmox/start-4.PNG)</br>
+![image](proxmox/start3.PNG)</br>
+![image](proxmox/start4.PNG)</br>
 
 # 
 
 上傳完就可以建立虛擬機 VM ID是虛擬機的編號，從100開始，Name為虛擬機的名稱
-![image](proxmox/start-5.PNG)</br>
-![image](proxmox/start-6.PNG)</br>
+![image](proxmox/start5.PNG)</br>
+![image](proxmox/start6.PNG)</br>
 
 Graphic card可以選擇虛擬機顯卡類型
-![image](proxmox/start-7.PNG)</br>
+![image](proxmox/start7.PNG)</br>
 
 Bus/Device可以選擇SATA等硬碟類型
-![image](proxmox/start-8.PNG)</br>
+![image](proxmox/start8.PNG)</br>
 
 Sockets:CPU數量，Cores:核心數
-![image](proxmox/start-9.PNG)</br>
-![image](proxmox/start-10.PNG)</br>
-![image](proxmox/start-11.PNG)</br>
+![image](proxmox/start9.PNG)</br>
+![image](proxmox/start10.PNG)</br>
+![image](proxmox/start11.PNG)</br>
 
 確認所有配置
-![image](proxmox/start-12.PNG)</br>
+![image](proxmox/start12.PNG)</br>
 
 ## 使用虛擬機
 
