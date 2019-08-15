@@ -30,7 +30,7 @@ Proxmox VE（英語：Proxmox Virtual Environment，通常簡稱為Proxmox），
 
 ## 剛安裝完成 Proxmox 後，務必要立即做系統的安全性更新。
 
-### 安裝vim，因為預設得vi輸入方式非常不好用，要先update再安裝，不然會有錯誤
+1.安裝vim，因為預設得vi輸入方式非常不好用，要先update再安裝，不然會有錯誤
 
 ```
 apt-get update
@@ -38,7 +38,7 @@ apt-get install vim
 ```
 
 
-### 變更 ipv4和ipv6 的優先順序為 ipv4 優先(速度會較快)
+2.變更 ipv4和ipv6 的優先順序為 ipv4 優先(速度會較快)
 某些更新站台或政府網站會同時回應 ipv4和ipv6，但ipv6卻無法正常回應，
 這時在預設以 ipv6 為優先的情況下會造成連不上或系統無回應.
 而遇到ipv6無回應的情況下會等待約21秒的時間才會切換回 ipv4，而造成等待的困擾.
@@ -53,7 +53,7 @@ pico /etc/gai.conf
 precedence ::ffff:0:0/96  100
 
 
-## 將預設認購套件庫取消(官方只是希望使用者能付費來提供遠端的維護)
+3.將預設認購套件庫取消(官方只是希望使用者能付費來提供遠端的維護)
 pico /etc/apt/sources.list
 加上這一行並存檔 (6.0-1 版 生效)
 deb http://download.proxmox.com/debian jessie pve-no-subscription
