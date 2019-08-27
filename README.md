@@ -112,4 +112,52 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 ```
 參考網址:https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/user-guide/nested-virtualization
 
+## 叢級管理全部主機
+
+將多台的 Proxmox Server 集合起來，可以在任何一台 Proxmox Server 上進行管理工作。
+二台 Proxmox Server 的 VMID 不能一樣
+
+假設這邊有兩台主機
+1. A主機(主)
+2. B主機(副)
+
+### 步驟一 建立叢集
+
+開啟網頁的終端機shell
+
+![image](https://github.com/leoa12412a/Proxmox/blob/master/proxmox/shell.PNG)</br>
+
+```
+pvecm create pvecluster   // pvecluster為叢集名稱
+```
+
+### 步驟二 將B機的設定檔移至它處 
+
+```
+mkdir -p /root/pve/{lxc,qemu-server} 
+mv /etc/pve/lxc/* /root/pve/lxc 
+mv /etc/pve/qemu-server/* /root/pve/qemu-server 
+reboot 
+```
+
+### 步驟三 將B機加入A機的叢集
+
+```
+pvecm add 192.168.131.226 
+```
+
+沒有第二步驟會有錯誤，無法加入
+
+### 步驟四 將B主機上設定擋再移回來
+
+```
+mv /root/pve/lxc/* /etc/pve/lxc 
+mv /root/pve/qemu-server/* /etc/pve/qemu-server 
+rm -rf /root/pve 
+reboot 
+```
+
+### 兩台機器皆可皆可進行管理
+
+![image](https://github.com/leoa12412a/Proxmox/blob/master/proxmox/vm.PNG)</br>
 
