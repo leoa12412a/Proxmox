@@ -127,6 +127,7 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 
 ![image](https://github.com/leoa12412a/Proxmox/blob/master/proxmox/shell.PNG)</br>
 
+A主機建立叢集
 ```
 pvecm create pvecluster   // pvecluster為叢集名稱
 ```
