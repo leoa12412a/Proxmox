@@ -63,6 +63,7 @@ vi /etc/apt/sources.list
 加上這一行並存檔 (6.0-1 版 生效)<br>
 ```
 deb http://download.proxmox.com/debian jessie pve-no-subscription
+```
 
 <br>
 再執行更新<br>
