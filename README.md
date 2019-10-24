@@ -54,17 +54,24 @@ precedence ::ffff:0:0/96  100<br>
 
 <br>
 3.將預設認購套件庫取消(官方只是希望使用者能付費來提供遠端的維護)<br>
+
 ```
 vi /etc/apt/sources.list
 ```
+
 <br>
 加上這一行並存檔 (6.0-1 版 生效)<br>
-deb http://download.proxmox.com/debian jessie pve-no-subscription<br>
+```
+deb http://download.proxmox.com/debian jessie pve-no-subscription
+
+<br>
 再執行更新<br>
+
 ```
 apt-get update
 apt-get dist-upgrade -y --force-yes
 ```
+
 <br>
 更新後會將 Proxmox VE 更新至官方目前的最新套件版本
 
